@@ -20,7 +20,131 @@
         <p>
             Our hope is for the site to be operational by tomorrow, March 5th by 4PM EST. We will confirm this via email and through social media, so please keep an eye out for the updates.
         </p>
-        <p>
+        <p><!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>John Tyler Christopher | Artist of Covers | Man of Few Words</title>
+                <style>
+                    body { text-align: center; padding: 100px 10px 0; min-width: 440px; }
+                    h1 { font-size: 50px; text-align: center; }
+                    body { font: 20px Helvetica, sans-serif; color: #333; }
+                    article { display: block; text-align: left; max-width: 650px; margin: 0 auto; }
+                    a { color: #dc8100; text-decoration: none; }
+                    a:hover { color: #333; text-decoration: none; }
+
+                    #clockdiv{
+                    font-family: sans-serif;
+                    color: #fff;
+                    display: block;
+                    font-weight: 100;
+                    text-align: center;
+                    font-size: 30px;
+                    margin: 0 auto;
+                    width: 342px;
+                    }
+
+                    #clockdiv > div{
+                    padding: 10px;
+                    border-radius: 3px;
+                    background: #787878;
+                    display: inline-block;
+                    }
+
+                    #clockdiv div > span{
+                    padding: 15px;
+                    border-radius: 3px;
+                    background: #3a3c3c;
+                    display: inline-block;
+                    }
+
+                    .smalltext{
+                    padding-top: 5px;
+                    font-size: 16px;
+                    }
+                </style>
+            </head>
+            <body>
+                <article>
+                    <h1>John Tyler Christopher</h1>
+                    <div id="clockdiv">
+                        <!-- <div>
+                          <span class="days"></span>
+                          <div class="smalltext">Days</div>
+                        </div> -->
+                        <div>
+                          <span class="hours"></span>
+                          <div class="smalltext">Hours</div>
+                        </div>
+                        <div>
+                          <span class="minutes"></span>
+                          <div class="smalltext">Minutes</div>
+                        </div>
+                        <div>
+                          <span class="seconds"></span>
+                          <div class="smalltext">Seconds</div>
+                        </div>
+                    </div>
+                    <div>
+                        <p><strong>&mdash; ANNOUNCEMENT &mdash;</strong></p>
+                        <p>The JTC Action Figure Variant issue #12 - Luke Skywalker Stormtrooper SALE IS RESCHEDULED FOR <strong>FRIDAY, MARCH 5TH @ 4PM EST.</strong></p>
+                        <p>DUE TO THE OVERWHELMING VOLUME OF PEOPLE TRYING TO PURCHASE BOOKS, THE SITE NOT ONLY CRASHED BUT BROKE. WE ARE FIXING THE ISSUE AS WE SPEAK BUT IT WILL TAKE LONGER THAN ANTICIPATED.</p>
+                        <p>PLEASE KEEP AN EYE OUT FOR UPDATES VIA THE WEBSITE, EMAIL AND THROUGH SOCIAL MEDIA.</p>
+                        <p>WE ARE SO VERY SORRY FOR THIS DELAY AND INCONVENIENCE.</p>
+                        <p>SINCERELY,</p>
+                        <p>&mdash; JOHN TYLER CHRISTOPHER</p>
+                    </div>
+                </article>
+
+                <script>
+                    function getTimeRemaining(endtime) {
+                    const total = Date.parse(endtime) - Date.parse(new Date());
+                    const seconds = Math.floor((total / 1000) % 60);
+                    const minutes = Math.floor((total / 1000 / 60) % 60);
+                    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+                    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+                    return {
+                        total,
+                        days,
+                        hours,
+                        minutes,
+                        seconds
+                    };
+                    }
+
+                    function initializeClock(id, endtime) {
+                    const clock = document.getElementById(id);
+                    // const daysSpan = clock.querySelector('.days');
+                    const hoursSpan = clock.querySelector('.hours');
+                    const minutesSpan = clock.querySelector('.minutes');
+                    const secondsSpan = clock.querySelector('.seconds');
+
+                    function updateClock() {
+                        const t = getTimeRemaining(endtime);
+
+                        // daysSpan.innerHTML = t.days;
+                        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                        if (t.total <= 0) {
+                        clearInterval(timeinterval);
+                        }
+                    }
+
+                    updateClock();
+                    const timeinterval = setInterval(updateClock, 1000);
+                    }
+
+                    const deadline = new Date('2021-03-05 21:00:00Z');
+                    initializeClock('clockdiv', deadline);
+                </script>
+            </body>
+            </html>
+
             We are so sorry for this inconvenience. We know there are a lot of you from across the pond that stayed up late for this and for that we are truly sorry.
         </p>
         <p>
